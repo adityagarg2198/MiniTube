@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { Grid,Paper,makeStyles,Avatar } from '@material-ui/core';
 import CodeIcon from '@material-ui/icons/Code';
-import dotenv from 'dotenv';
+
 
 
 
@@ -100,8 +100,7 @@ const Home = () => {
 
     const search=async()=>{
         try{
-            const key=process.env.KEY;
-            const url=`https://www.googleapis.com/youtube/v3/search?part=snippet&key=${key}&q=${input}&type=video&maxResults=50`;
+            const url=`https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyA38SoPHzDuWi3F04dT7kBum0nUI1nMLKE&q=${input}&type=video&maxResults=50`;
                 const res=await fetch(url,{
                     method:"GET",
                     headers:{
